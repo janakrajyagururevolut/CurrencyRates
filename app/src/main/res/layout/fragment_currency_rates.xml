@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isCurrencyListEmpty"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="progressMessage"
+            type="java.lang.String" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{progressMessage}"
+            android:visibility="@{isCurrencyListEmpty ? View.VISIBLE : View.GONE}" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/currencyRatesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{isCurrencyListEmpty ? View.GONE : View.VISIBLE}"
+            tools:listitem="@layout/list_item_currency_rate" />
+    </FrameLayout>
+</layout>
