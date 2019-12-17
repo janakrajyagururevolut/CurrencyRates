@@ -1,4 +1,4 @@
-package com.revolut.android.currencyrates.views
+package com.revolut.android.currencyrates
 
 import android.os.Bundle
 import android.view.LayoutInflater

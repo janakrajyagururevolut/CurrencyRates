@@ -8,7 +8,7 @@
             android:id="@+id/currencyRatesFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.revolut.android.currencyrates.views.CurrencyRatesFragment"/>
+            android:name="com.revolut.android.currencyrates.CurrencyRatesFragment"/>
     </FrameLayout>
 
 </layout>
